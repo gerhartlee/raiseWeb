@@ -17,19 +17,11 @@
     {% for p in posts %}
     <div class='col-sm-12 col-md-6'>
       <div class='card {% cycle "text-white bg-primary" "bg-warning" "bg-success" %}'>
-        <div class='card-header'>
-          <table width='100%'>
-            <tr>
-              <td>
-                [{{ p.nickname }}]覺得{{ p.mood }}
-              </td>
-              <td align=right>
-                <i><small>{{ p.pub_time }}</small></i>
-              </td>
-            </tr>
-          </table>
-        </div>
+        <div class='card-header text-white bg-secondary'>【{{ p.nickname }}】覺得{{ p.mood }}</div>
         <div class='card-body'>{{ p.message | linebreaks }}</div>
+        <div class='card-footer' align='right'>
+          <i><small>{{ p.pub_time }}</small></i>
+        </div>
       </div>
       <br/>
     </div>
